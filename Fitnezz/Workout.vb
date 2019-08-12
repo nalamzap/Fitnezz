@@ -68,7 +68,7 @@
                 x = Cursor.Position.X
                 y = Cursor.Position.Y
             Else
-                Me.DesktopLocation = New Point(Me.DesktopLocation.X - (x - Cursor.Position.X), Me.DesktopLocation.Y - (y - Cursor.Position.Y))
+                DesktopLocation = New Point(DesktopLocation.X - (x - Cursor.Position.X), DesktopLocation.Y - (y - Cursor.Position.Y))
                 x = Cursor.Position.X
                 y = Cursor.Position.Y
             End If

@@ -49,13 +49,16 @@
 			kt.Add(file)
 		Next
 		fNum = kt.Count
-		Kata1.Button2.Visible = False
-		If fNum > 0 Then
-			Kata1.Label1.Text = kt(n).Substring(kt(n).LastIndexOf(Char.Parse("\")) + 3, kt(n).LastIndexOf(Char.Parse(".")) - kt(n).LastIndexOf(Char.Parse("\")) - 3)
-			If Not (fNum > 1) Then
-				Kata1.Button1.Visible = False
-			End If
-		End If
+        Kata1.Button2.Visible = False
+        Kata1.Button1.Visible = False
+        If fNum > 0 Then
+            Kata1.Label1.Text = kt(n).Substring(kt(n).LastIndexOf(Char.Parse("\")) + 3, kt(n).LastIndexOf(Char.Parse(".")) - kt(n).LastIndexOf(Char.Parse("\")) - 3)
+            If fNum > 1 Then
+                Kata1.Button1.Visible = True
+            End If
+        Else
+            Kata1.Label1.Text = "Kata videos are missing..."
+        End If
 	End Sub
 
 	Private Sub PauseKV_Click(sender As Object, e As EventArgs) Handles PauseKV.Click
